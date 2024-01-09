@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profiles</title>
+  <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #4c59af;
+    padding: 15px 20px;
+    text-align: right;
+}
+
+.header a {
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header a:hover {
+    background-color: #4c59af;
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.description {
+    flex: 1;
+}
+
+.view-profile-btn {
+    width: 80px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    padding: 10px;
+    background-color: #4c59af;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+.view-profile-btn:hover {
+    background-color: #4c59af;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="/" >Logout </a>
+  
+  </div>
+
+  <div class="card">
+   
+    <div id="data-container">
+    
+                           
+  </div>
+  <% data.forEach(item => { %>
+    <img class="profile-photo" src="https://via.placeholder.com/100" alt="Profile Photo">
+
+    <div class="card">
+      <h2><%= item.name %></h2>
+      
+    
+      <a href="#" class="view-profile-btn" onclick="viewProfile()">View Profile</a>
+     </div>
+  <% }); %>
+  
+
+</body>
+</html>
+
