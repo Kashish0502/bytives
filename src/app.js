@@ -50,9 +50,10 @@ app.post("/signup", async(req, res)=>{
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        confirmPassword: cpassword
+        confirmPassword:cpassword
         
        })
+       
      
        const registered = await RegisterUser.save();
 
